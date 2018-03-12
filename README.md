@@ -1,2 +1,3 @@
-# Python_Spring_2018
-Slides and code samples for the CU Research Computing Python workshop (Spring 2018)
+# Python Workshop Series
+## CU Research Computing (Spring_2018)
+Slides and code samples for the Python Workshop
