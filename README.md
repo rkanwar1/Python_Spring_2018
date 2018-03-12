@@ -1,7 +1,7 @@
 ## RC Python Workshop Series (Spring 2018)
 
 ### Instructor:
-Nick Featherstone (Research Computing & Department of Applied Mathematics)  
+Nick Featherstone 
 303-735-2102  
 ARCE 677
 
