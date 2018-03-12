@@ -14,7 +14,7 @@ Adminstrative Research Center (ARC / ARCE ) Room 620
 
 ARC is located on east campus at 3100 Marine Street, near 30th and Arapahoe.   To access room 620, take the elevator to the 6th floor.  Turn right, and right again, to round the corner immediately upon exiting the elevator.  Room 620 will be the first room on your right.
 
-## Description:  
+### Description:  
 This workshop series will provide a brief overview of Python programming and some research-useful Python packages. This course will not cover “how to program;"  it is expected that all attendees have introductory-level experience in at least one other programming language. 
 
 ### Part 1:  Python Essentials
