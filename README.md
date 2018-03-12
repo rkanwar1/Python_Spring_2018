@@ -1,11 +1,16 @@
 ## RC Python Workshop Series (Spring 2018)
 
+### Instructor:
+Nick Featherstone (Research Computing & Department of Applied Mathematics)  
+303-735-2102  
+ARCE 677
+
 ### Date & Time:
 Wednesdays 11:00 am - 12:30 pm  
 *Note:  The April 4th class will run from 10:30 am to 12:00 pm due to room availability*
 
 ### Location:
-Adminstrative Research Center (ARC / ARCE ), Room 620  
+Adminstrative Research Center (ARC / ARCE ) Room 620  
 
 ARC is located on east campus at 3100 Marine Street, near 30th and Arapahoe.   To access room 620, take the elevator to the 6th floor.  Turn right, and right again, to round the corner immediately upon exiting the elevator.  Room 620 will be the first room on your right.
 
