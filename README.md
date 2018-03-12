@@ -1,6 +1,4 @@
-# Python Workshop Series
-## CU Research Computing (Spring 2018)
-Slides and code samples for the Python Workshop
+## RC Python Workshop Series (Spring 2018)
 
 ### Date & Time:
 Wednesdays 11:00 am - 12:30 pm  
@@ -22,4 +20,8 @@ April 11:  NumPy
 April 18:  Matplotlib    
 April 25:  H5Py  
 May &nbsp;2:  Custom package creation (subject to change)  
-  
+
+
+### Useful References:  
+[How to Think Like a Computer Scientist (free online text)](http://openbookproject.net/thinkcs/python/english3e/)  
+[Python Programming: An Introduction to Computer Science (textbook)](http://mcsp.wartburg.edu/zelle/python/)
