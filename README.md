@@ -3,7 +3,7 @@
 Slides and code samples for the Python Workshop
 
 ### Date & Time:
-Wednesdays 11:00 am - 12:30 pm
+Wednesdays 11:00 am - 12:30 pm  
 *Note:  The April 4th class will run from 10:30 am to 12:00 pm due to room availability*
 
 ### Location:
