@@ -2,6 +2,10 @@
 ## CU Research Computing (Spring 2018)
 Slides and code samples for the Python Workshop
 
+### Date & Time:
+Wednesdays 11:00 am - 12:30 pm
+*Note:  The April 4th class will run from 10:30 am to 12:00 pm due to room availability*
+
 ### Location:
 Adminstrative Research Center (ARC / ARCE ), Room 620  
 
@@ -11,7 +15,7 @@ ARC is located on east campus at 3100 Marine Street, near 30th and Arapahoe.   T
 March 14:  Overview, 'Hello World!,' variables and assignment  
 March 21:  Conditionals, functions  
 March 28:  Loops, lists, tuples, dictionaries  
-April 4:  Objects, modules  
+April 4:  Objects, methods, modules  
 
 ### Part 2:  Useful Python Packages 
 April 11:  NumPy   
