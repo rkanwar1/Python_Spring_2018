@@ -1,4 +1,4 @@
-### Compound Interest Exercise
+### Compound Interest Exercise  
 The formula for compound interest is given by:  
 ![alt text]( interest_formula.png "Image Credit: http://openbookproject.net/thinkcs/python/english3e ")  
 
