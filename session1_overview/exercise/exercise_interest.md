@@ -1,2 +1,2 @@
 ### Compound Interest Exercise
-![alt text]( interest_formula.png "Logo Title Text 1")
+![alt text]( interest_formula.png "Image Credit: http://openbookproject.net/thinkcs/python/english3e ")
