@@ -8,8 +8,8 @@ def factorial(n):
 mstr = input("Enter a number: ")
 m = int(mstr)
 try:
-    print('m! is',factorial(m),'.')
+    print(str(m)+'! is ',factorial(m),'.', sep='')
 except:
-    print('An error occurred.')
+    print('An error occurred.  Program will continue')
 
-print("But the program continues!")
+print("Program complete!")
