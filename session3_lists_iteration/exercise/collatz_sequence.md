@@ -1,8 +1,16 @@
-### Recursive Gymnastics
+### The Collatz Sequence
 
-1.   Write a recursive function that accepts a single, integer parameter "n". If n is positive, the function should recursively print all odd numbers 1 through n (or through n-1 if n is even).
+Given a positive integer as a starting point, we can generate a sequence of numbers according to the following algorithm:
+1. If n is even, create a new number by dividing n by 2;  if it is odd, multiply by 3 and add 1
+2. Repeat this process until you arrive at the number 1.
 
-2.   Next, write a recursive function that prints all the even numbers 2 through n... but in reverse.
+This is known as the Collatz sequence or the Hailstone sequence associated with the starting number.   The Collatz conjecture states that given any positive starting number n, the sequence will eventually terminate at 1.   This has not been proven mathematically, but it is true for every number anyone has ever tested.
 
-3.   Finally, write a recursive function that prints n! for all numbers 1 through n.
+Write a function that returns the Collatz sequence of a given number.  The sequence should be returned as a list of numbers.
+
+For example, if we evaluation collatz_seq(5), we should get:
+[ 5,16,8,4,2,1 ]
+
+collatz_seq(20) will yield:
+[ 20, 10, 5, 16, 8, 4, 2, 1 ] 
 
