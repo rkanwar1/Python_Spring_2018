@@ -1,6 +1,6 @@
 def collatz_sequence(n):
     if (n <= 1):
-        return 0
+        return [1]
     num = n
     seq = [n]
     while (num > 1):
