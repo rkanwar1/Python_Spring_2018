@@ -34,3 +34,5 @@ May &nbsp;2:  Custom package creation (subject to change)
 [How to Think Like a Computer Scientist (FREE online text)](http://openbookproject.net/thinkcs/python/english3e/)  
 [Python Programming: An Introduction to Computer Science (textbook)](http://mcsp.wartburg.edu/zelle/python/)
 
+
+
