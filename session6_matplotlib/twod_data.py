@@ -22,12 +22,11 @@ for i in range(nx):
 
 ################################################3
 #Plot
-plt.figure(1)
+fig, ax = plt.subplots()
 # We use the pcolormesh function
-img = plt.pcolormesh(mydata,cmap='jet')
+img = ax.pcolormesh(mydata,cmap='jet')
 
-#If desired, we can add a colorbar
-plt.colorbar(label='Amplitude')
+
 
 ###############################
 # Add some contours
@@ -35,10 +34,12 @@ plt.colorbar(label='Amplitude')
 clevels = [-0.03, -0.02, -0.01, -0.005,  0.005, 0.01, 0.02, 0.03]
 # We can also define line styles.  Make the negative levels dashed:
 cstyles = ['--', '--', '--', '--', '-', '-', '-', '-' ]
-plt.contour(mydata, levels = clevels, linestyles=cstyles)
+cs = ax.contour(mydata, levels = clevels, linestyles=cstyles)
+#If desired, we can add a colorbar
+#colorbar is a method of the figure object, not the axes object
+cbar = fig.colorbar(img, label='Amplitude')
 
-
-plt.xlabel('Longitude')
-plt.ylabel('Latitude')
+ax.set_xlabel('Longitude')
+ax.set_ylabel('Latitude')
 
 plt.show()
