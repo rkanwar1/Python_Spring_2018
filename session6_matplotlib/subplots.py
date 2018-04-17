@@ -1,6 +1,6 @@
 ##################################################################
-# Example:  Creating a plot with:
-#  -- multiple subplots
+# Example:  Creating a figure with:
+#  -- multiple plots
 #  -- text annotation
 #  -- data created using an FFT
 
@@ -30,7 +30,7 @@ def compute_power(the_signal):
     return the_power
 
 ###################################################
-#  Generate some data
+#  First, generate some data.
 #  We construct three sample signals (in time) and 
 #  their associated power spectrum (in frequency space)
 pi = np.pi
@@ -44,7 +44,6 @@ fshift = npts*df*0.5
 
 frequency = np.linspace(0,npts*df,npts,dtype=mydt)
 frequency = frequency-frequency[npts//2] # shift the zero point
-print(frequency[ 256] )
 
 # Let's create a few sample signals and examine their power spectrum
 sig1 = np.exp(-((time-time[npts//2])/alpha)**2) # Gaussian pulse
@@ -59,52 +58,80 @@ sig2_pow = compute_power(sig2)
 sig3_pow = compute_power(sig3)
 
 
+###########################################3
+#  Next, set up the plot
+savefig=True
 
-plt.figure(1)
+sizetuple = (9,6)  # 9" wide x 6" tall
 
-# We can place multiple plots on the same figure using the subplot function
-# Prior to creating each plot, we specify it's location via three numbers
-# (number of rows, number of columns, image ID; images laid out left to right and down rows)
-plt.subplot(3, 2, 1)  
-plt.plot(time,sig1)
-plt.xlabel('time (s)')
-plt.ylabel('amplitude (dB)')
+# Set up the image.  In addition to the image size,
+# We also indicate that we will have multiple plots,
+# distributed across 2 columns and 3 rows.
+ 
+fig, ax = plt.subplots(ncols = 2, nrows = 3 , figsize=sizetuple)
+
+
+# ax is now a 2-D list of axes objects.  The first index
+# indicates the row.  The second index indicates the column.
+
+#################################
+# ROW 1
+#
+# column 1
+ax[0,0].plot(time,sig1)
+ax[0,0].set_xlabel('time (s)')
+ax[0,0].set_ylabel('amplitude (dB)')
+ax[0,0].set_title('Input Signal')
 
 # We can annotate our plot using "text"
 # To do so, we specify (x-data coordinate, y-data coordinate, and string value) 
-plt.text(0,0.5,'Gaussian Pulse')  # We can annotate our plot using text(x-data coord, y-data coordinate, 
-plt.title('Input Signal')
+ax[0,0].text(0,0.5,'Gaussian Pulse')  # We can annotate our plot using text(x-data coord, y-data coordinate, 
 
-plt.subplot(3,2,2)
-plt.plot(frequency/1000.0,sig1_pow)
-plt.xlabel('frequency (kHz)')
-plt.xlim([-10,10])
-plt.title('Power Spectrum')
+#column 2
+ax[0,1].plot(frequency/1000.0,sig1_pow)
+ax[0,1].set_xlabel('frequency (kHz)')
+ax[0,1].set_xlim([-10,10])
+ax[0,1].set_title('Power Spectrum')
 
-plt.subplot(3, 2, 3)
-plt.plot(time,sig2)
-plt.xlabel('time (s)')
-plt.ylabel('amplitude (dB)')
+#####################################
+# ROW 2
+#
+# column 1
+ax[1,0].plot(time,sig2)
+ax[1,0].set_xlabel('time (s)')
+ax[1,0].set_ylabel('amplitude (dB)')
+
 # We can add a bounding box around our annotation if we would like
-# using the 
+# using the bbox keyword
 # alpha = 0 is transparent; alpha = 1 is opaque
-plt.text(0,0.5,'Square Pulse', bbox=dict(facecolor='red', alpha=0.1))  
 
-plt.subplot(3,2,4)
-plt.plot(frequency/1000.0,sig2_pow)
-plt.xlabel('frequency (kHz)')
-plt.xlim([-10,10])
+ax[1,0].text(0,0.5,'Square Pulse', bbox=dict(facecolor='red', alpha=0.1))  
 
-plt.subplot(3, 2, 5)
-plt.plot(time,sig3)
-plt.xlabel('time (s)')
-plt.ylabel('amplitude (dB)')
-plt.text(0,0.5,'Truncated Sine Wave')
 
-plt.subplot(3,2,6)
-plt.plot(frequency/1000.0,sig3_pow)
-plt.xlabel('frequency (kHz)')
-plt.xlim([-10,10])
 
-plt.tight_layout()   # This command can be 
-plt.show()
+# column 2
+ax[1,1].plot(frequency/1000.0,sig2_pow)
+ax[1,1].set_xlabel('frequency (kHz)')
+ax[1,1].set_xlim([-10,10])
+
+###############################3
+# ROW 3
+#
+# column 1
+ax[2,0].plot(time,sig3)
+ax[2,0].set_xlabel('time (s)')
+ax[2,0].set_ylabel('amplitude (dB)')
+ax[2,0].text(0,0.5,'Truncated Sine Wave')
+
+# column 2
+ax[2,1].plot(frequency/1000.0,sig3_pow)
+ax[2,1].set_xlabel('frequency (kHz)')
+ax[2,1].set_xlim([-10,10])
+
+plt.tight_layout()
+
+if (savefig):
+    filename = 'subplots.png'
+    plt.savefig(filename)
+else:
+    plt.show()
