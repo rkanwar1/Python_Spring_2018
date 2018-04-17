@@ -2,6 +2,7 @@
 #
 #       Plotting Example
 #           - displays a histogram and a polar plot
+#           - provides example of Cartesian plot alongside polar plot
 
 import numpy as np
 import matplotlib.mlab as mlab
@@ -38,33 +39,39 @@ for i in range(npts):
 
 ##########################################
 # Begin the figure
-plt.figure(1)
+# Since we wish to draw a Cartesian plot
+# alongside a polar plot, the sequence
+# of commands we type is somewhat different
+# in that figure and axes objects are initialized
+# individually
+
+# Begin by initializing the figure object
+fig = plt.figure(1)
 
 ##############################
 # Subplot 1 :  histogram of theta values
-plt.subplot(1,2,1)
+# Initialize our first axes object.
+ax1=plt.subplot(1,2,1)  # 1 row, 2 columns, image 1  (1,2,1)
 
 # the histogram of the data
 num_bins = 50
-plt.hist(theta, num_bins, normed=1)
-plt.xlabel(r'$\theta$')
-plt.ylabel('Probability density')
-plt.title(r'Histogram of $\theta$-values')
+ax1.hist(theta, num_bins, normed=1)
+ax1.set_xlabel(r'$\theta$')
+ax1.set_ylabel('Probability density')
+ax1.set_title(r'Histogram of $\theta$-values')
 
 ################################################
 # Subplot 2 : Polar Plot of our Random Points
-# "ax" is an axes object.
-# We can manipulate the plot via plt or else through methods of ax
-ax=plt.subplot(1,2,2,projection='polar') 
+# Initialize our second axes object and set its projection to polar
+
+ax2=plt.subplot(1,2,2,projection='polar')  # 1 row, 2 columns, image 2 (1,2,2)
 
 for i in range(npts):
-    plt.plot(theta[i], r[i], 'r.')   # plot each point individually (no connecting line)
+    ax2.plot(theta[i], r[i], 'r.')   # plot each point individually (no connecting line)
 
-plt.title('Random Points')
-ax.set_rticks([0.5, 0.75, 1])  # Control radial ticks -- most easily accessible via "axes" object
-ax.set_rlabel_position(-22.5)  # Move radial labels away from plotted line
-
-#plt.gca(projection='polar')  # If we weren't working with subplots or axes objects, we could do this
+ax2.set_title('Random Points')
+ax2.set_rticks([0.5, 0.75, 1])  # Control radial ticks -- most easily accessible via "axes" object
+ax2.set_rlabel_position(-22.5)  # Move radial labels away from plotted line
 
 plt.tight_layout()
 plt.show()
