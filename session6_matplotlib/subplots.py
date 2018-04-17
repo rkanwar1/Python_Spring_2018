@@ -60,7 +60,7 @@ sig3_pow = compute_power(sig3)
 
 ###########################################3
 #  Next, set up the plot
-savefig=True
+savefig=False
 
 sizetuple = (9,6)  # 9" wide x 6" tall
 

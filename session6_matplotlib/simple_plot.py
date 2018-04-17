@@ -67,7 +67,7 @@ if (savefig):
     #ext='png'
     #ext='jpeg'
     ext='pdf'
-    filename = 'line_plot.'+ext
+    filename = 'simple_plot.'+ext
     plt.savefig(filename)
 else:
     #To view the plot on our screen, we use the "show" function.
